@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<style> 
+
+/* Small Query less than 800pixels */ 
+
+body {
+  background-color: #ffff;
+   background-size: cover;
+   background-repeat: repeat;
+}
+
+#main {
+  width: 705px;
+  height: 300px;
+  border: 2px solid black;  
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  margin-left: -20%;
+  
+ 
+}
+
+#piano_header {
+   background-color: black;
+   width: 707px;
+   height: 70px;
+   border:  solid gold;
+   margin-left: 30%;
+   border: 10px 15px 0px 10px;
+   margin-top: 100px;
+}
+
+
+#main div {
+  -webkit-flex: 1;  /* Safari 6.1+ */
+  -ms-flex: 1;  /* IE 10 */  
+  flex: 1; 
+  border: 1px solid black;
+  border-bottom: 8px solid rgb(250 250 250);
+}
+
+/*Main bottoms */
+#paino_colors {    
+  color: white;
+}
+
+div :hover {
+  background-color: gold;
+}
+/* */
+
+
+/* second buttoms */
+.small {
+   background-color: black;
+   width: 40px;
+   height: 200px;
+   margin-left: -22px;
+}
+/* */
+
+
+/* */
+
+
+
+@media only screen and (max-width: 1600px) {
+  body {
+  height: 100%;
+  width: 100%;
+  background-color: #ffff;    
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  margin-right: 200px;
+  }
+  
+  #main {
+    margin-left: 13%;
+    
+  }
+  
+  #piano_header {
+   margin-left: 12.5%;
+   margin-top: 40px;
+   background-color: ghostwhite;
+   border: 2px solid black;
+}
+
+
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  
+}
+
+
+header p {
+  text-align: center;
+}
+
+
+header {
+  background-color: rgb(250 250 250);
+  margin-left: 30%;
+  margin-right: 0%;
+  padding: 3px;
+  width: 400px;
+  }
+  
+     #piano_footer {
+  background-color:black;
+  width: 709px; 
+  margin-left: 13%;
+}
+#brand {
+  background-color: gold;
+  padding: 1px;
+  text-align: center;
+ 
+}
+
+#asisde1 {
+  background-color: black;
+  width: 713px;
+  margin-left: 12.5%;
+   text-align: center;
+}
+}
+
+
+
+/*  END OF SMall Query */
+
+/* Big Size query */
+@media only screen and (min-width: 1660px) {
+
+#main {
+  width: 920px;
+  margin-left: 23%;
+  border-right: 10px solid gray;
+  
+  
+ 
+}
+
+#piano_header {
+  width: 900px;
+  margin-left: 23%;
+ 
+}
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  font-size: 45px;
+  
+}
+
+
+header p {
+  text-align: center;
+  font-size: 18px;
+}
+
+
+header {
+  background-color: rgb(250 250 250);
+  margin-left: 170px;
+  margin-right: 20px;
+  padding: 3px;
+  background-color: black;
+  width: 500px;
+  margin-left: 580px;
+  color: white;
+  }
+   
+   #piano_footer {
+  background-color:black;
+  width: 932px; 
+  margin-left: 360px;
+}
+#asisde1 {
+ background-color: gold;
+ width: 920px;
+ margin-left: 23%;
+ color: black;
+ text-align: center;
+ font-family: serif;
+ font-weight: bold;
+ 
+}
+
+/* 
+#asisde2 {
+
+  background-color: black;
+  color: black;
+  position: relative;
+  width: 20px;
+  float: right;
+   margin-right: 18.20%;
+   margin-top: 195px;
+   border: 1px solid black;
+   height: 320px;
+ 
+}*/
+
+
+#asisde3 {
+
+  background-color: black;
+  color: black;
+  width: 20px;
+  float: left;
+
+   margin-left: 21.65%;
+   margin-top: 195px;
+   border: 1px solid black;
+   height: 320px;
+ 
+}
+#brand {
+  background-color: gold;
+  padding: 1px;
+ 
+}
+  }
+
+
+
+/* */
+
+/* try */
+.key {
+ background-color: ghostwhite;
+}
+
+
+/* */
+
+.btn{
+  text-align: center;
+  padding: 10px;
+  color: black;
+  border: 3px solid black;
+  background-color: #ffff00;
+  margin-left: 100px;
+}
+</style>
+</head>
+<body>
+
+
+<header>
+<h1 style="color: black;"><b>SIMPLE PIANO</b></h1>
+<p style="color: black; font-size: 32px;">BY FAISAL MLAIK</p>
+<button onclick="speech()" class="btn">CLICK FOR WELCOME</button>
+</header>
+
+
+
+<div id="asisde2"><span id="borderRight"></span></div>
+
+<div id="asisde3"><span id="borderLeft"></span></div>
+
+<br>
+
+<div id="piano_header"> </div>
+
+  
+  
+    <!-- All piano buttons -->
+    <!-- data-sound = sound file name  -->
+    <div id="main">
+      <div class="piano_keys" data-sound="do"></div>
+      <div class="piano_keys" data-sound="re"> <!-- here -->
+           <button id='test' class="small" ></button></div>
+      
+
+      <!-- here -->
+   
+      <div class="piano_keys" data-sound="mi">
+        <button class="small"></button>
+      </div>
+
+      <div class="piano_keys" data-sound="fa"></div>
+      <div class="piano_keys" data-sound="sol">
+        <button class="small"></button>
+      </div>
+      <div class="piano_keys" data-sound="la">
+        <button class="small"></button>
+      </div>
+      <div class="piano_keys" data-sound="si">
+        <button class="small"></button>
+      </div>
+
+      <div class="piano_keys" data-sound="c4"></div>
+      <div class="piano_keys" data-sound="d4">
+        <button class="small"></button>
+      </div>
+      <div class="piano_keys" data-sound="e4">
+        <button class="small"></button>
+      </div>
+        
+      
+    </div>
+  <div id="piano_footer">a</div>
+
+<!-- this part deveolped by abdelfatah.shahin admin at OMAC -->
+ <!--كود الجافاسكريبت -->
+
+<script>
+      const attachEvent = (elem, event, funcName) => {
+        if (elem.addEventListener) {
+          elem.addEventListener(event, funcName);
+        } else if (elem.attachEvent) {
+          //for IE
+          elem.attachEvent(`on${event}`, funcName);
+        } else {
+          elem[`on${event}`] = funcName;
+        }
+      };
+
+      const playSound = soundName => {
+        const sound = new Audio(`sounds/${soundName}.wav`);
+        const sound1 = new Audio(`sounds/${soundName}.mp3`);
+        sound.play();
+        sound1.play();
+      };
+
+      // handle onClick events on piano buttons
+      document.querySelectorAll(".piano_keys").forEach(elem => {
+        attachEvent(elem, "click", e => {
+          const soundName = elem.getAttribute("data-sound");
+          playSound(soundName);
+        });
+      });
+
+      // handle pressing keys
+      attachEvent(document, "keydown", e => {
+        // check keyboard keys codes at https://keycode.info/
+        const allowedKeys = {
+          65: "do", // char a
+          83: "re", // char s
+          68: "mi", // char d
+          70: "fa", // char f
+          71: "sol", // char g
+          72: "la", // char h
+          74: "si", // char j
+          75: "c4", // char k
+          76: "d4", // char l
+          188: "e4" // char ;
+        };
+        // check if one of the specified keys has been pressed
+        if (Object.keys(allowedKeys).indexOf(e.keyCode.toString()) > -1) {
+          playSound(allowedKeys[e.keyCode]);
+        }
+      });
+    </script>
+
+<script>
+const keys = document.getElementsByClassName("piano_keys");
+
+for (let i = 0; i < keys.length; i++) {
+  const key = keys.item(i);
+  key.addEventListener("mousedown", function() {
+    this.style.backgroundColor = "gold";
+  });
+  key.addEventListener("mouseup", function() {
+    this.style.backgroundColor = "transparent";
+  });
+}
+</script>
+ <!-- sounds -->
+ 
+ <!-- my Part again -->
+<audio id="myAudio">  
+  <source src="1.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio1">  
+  <source src="2.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio2"> 
+  <source src="12.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio3">  
+  <source src="3.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio4">  
+  <source src="4.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio5"> 
+  <source src="5.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio6">
+  <source src="6.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<audio id="myAudio7">
+  <source src="11.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<audio id="myAudio8">
+  <source src="10.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<audio id="myAudio9">
+  <source src="9.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  var user = window.prompt('enter your name')
+  
+  function speech()
+  {
+    
+  const voice = new SpeechSynthesisUtterance();
+  voice.voiceURI = 'native';
+voice.volume = 10; // 0 to 1
+voice.rate = 1; // 0.1 to 10
+voice.pitch = 2; //0 to 2
+voice.lang = 'en-US';
+  if(user==='Shaghil'){
+    voice.text="SHhAAAGGOOOOO BHAI G  WELCOME FROM FAISAL BHAI ";
+  }
+  else if(user==='shaghil'){
+    voice.text="SHhAAAGGOOOOO BHAI G  WELCOME FROM FAISAL BHAI ";
+  }
+  else{
+  voice.text="WELCOME FROM FAISAL MALIK"+user;
+  }
+  speechSynthesis.speak(voice);
+  }
+</script>
+<script>
+
+var a, b, c, d, e, f, g, a1, b2, c3;
+
+a = document.getElementById("mydo");
+b = document.getElementById("re");
+c = document.getElementById("mi");
+d = document.getElementById("fa");
+e = document.getElementById("sol");
+f = document.getElementById("la");
+g = document.getElementById("si");
+
+a1 = document.getElementById("do1");
+b2 = document.getElementById("re1");
+c3 = document.getElementById("mi1");
+
+function mydo() {
+   var mDO = document.getElementById("myAudio");  
+   mDO.play(); 
+   
+}
+
+function re() {
+   var RE = document.getElementById("myAudio1");  
+   RE.play(); 
+}
+
+function mi() {
+   var MI = document.getElementById("myAudio2");   
+   MI.play(); 
+}
+
+
+function fa() {
+   var FA = document.getElementById("myAudio3");  
+   FA.play();
+}
+
+function sol() {
+  var SOL = document.getElementById("myAudio4");
+  SOL.play();
+}
+
+
+function la() {
+  var LA = document.getElementById("myAudio5");
+  LA.play();
+}
+
+function si() {
+  var SI = document.getElementById("myAudio6");
+  SI.play();
+}
+
+function DO1() {
+   var myDo = document.getElementById("myAudio7");
+   myDo.play(); 
+}
+
+function re1() {
+   var RE = document.getElementById("myAudio8");
+   RE.play(); 
+}
+
+
+function mi1() {
+   var MI = document.getElementById("myAudio9"); 
+   MI.play(); 
+}
+
+
+/* KeyBoard Controls */
+
+var addEvent = document.addEventListener ? function(target,type,action){
+    if(target){
+        target.addEventListener(type,action,false);
+    }
+} : function(target,type,action){
+    if(target){
+        target.attachEvent('on' + type,action,false);
+    }
+}
+
+addEvent(document,'keydown',function(e){
+    e = e || window.event;
+    var key = e.which || e.keyCode;
+    if(key===83){
+        mydo();         
+    } else if (key === 68) { 
+        re();
+    } else if (key === 70) {
+        mi();
+    } else if (key === 71) {
+        fa();
+    } else if (key === 72) {
+        sol();
+    } else if (key === 73) {
+        la();
+    } else if (key === 74) {
+        si();
+    } else if (key === 75) {
+        DO1();
+    } else if (key === 76) {
+        re1();
+    } else if (key === 188) {
+        mi1()
+    }
+    
+      
+});
+
+
+/*End Of Keyboard Controls */
+
+</script>
+
+</body>
+</html>
